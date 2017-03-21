@@ -5,6 +5,16 @@
 //  Created by Bimonaretga on 3/14/17.
 //  Copyright © 2017 moeCodes. All rights reserved.
 //
+/*
+ properties:
+ 1.UIlables
+ 2.currentDate: NSDate
+ 3.book: Book
+ 4.sharedInstance
+ functionalities:
+ 1.refreshButtonPressed
+ 
+ */
 
 import UIKit
 
@@ -23,21 +33,15 @@ class BooksTableViewController: UITableViewController {
             }
         }
         
-        
-        
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("reloadView")
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        store.populateBooks {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
         
     }
@@ -64,9 +68,7 @@ class BooksTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! BookTableViewCell
         let book = store.books[indexPath.row]
-        cell.titleLabel.text = book.title
-        cell.authorLabel.text = book.author
-        cell.bookImage.image = #imageLiteral(resourceName: "BrianStaveley")
+        cell.book = book
 
         return cell
     }
@@ -81,11 +83,8 @@ class BooksTableViewController: UITableViewController {
             if let cell = sender as? UITableViewCell {
                 dest.book = store.books[(tableView.indexPath(for: cell)?.row)!]
             }
-        }
-        
-        if segue.identifier == "ShowAddBookVC" {
-//            let dest = segue.destination as! AddBookViewController
-//            if let cell = s
+        } else if segue.identifier == "ShowAddBookVC" {
+            //show add book show add book
             
         }
 

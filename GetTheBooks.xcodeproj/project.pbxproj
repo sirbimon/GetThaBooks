@@ -18,7 +18,7 @@
 		E70CB5AF1E78BE1900198C26 /* BooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CB5AE1E78BE1900198C26 /* BooksTableViewController.swift */; };
 		E70CB5B11E78BE3100198C26 /* BooksAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CB5B01E78BE3100198C26 /* BooksAPIClient.swift */; };
 		E70CB5B31E78BEAD00198C26 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CB5B21E78BEAD00198C26 /* Book.swift */; };
-		E70CB5B51E78C33300198C26 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CB5B41E78C33300198C26 /* File.swift */; };
+		E70CB5B51E78C33300198C26 /* BookDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CB5B41E78C33300198C26 /* BookDataStore.swift */; };
 		E70CB5B71E797CD200198C26 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CB5B61E797CD200198C26 /* AddBookViewController.swift */; };
 		E70CB5B91E7983BD00198C26 /* EditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CB5B81E7983BD00198C26 /* EditBookViewController.swift */; };
 		E70CB5BE1E79909C00198C26 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70CB5BD1E79909C00198C26 /* BookTableViewCell.swift */; };
@@ -51,7 +51,7 @@
 		E70CB5AE1E78BE1900198C26 /* BooksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksTableViewController.swift; sourceTree = "<group>"; };
 		E70CB5B01E78BE3100198C26 /* BooksAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksAPIClient.swift; sourceTree = "<group>"; };
 		E70CB5B21E78BEAD00198C26 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		E70CB5B41E78C33300198C26 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		E70CB5B41E78C33300198C26 /* BookDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDataStore.swift; sourceTree = "<group>"; };
 		E70CB5B61E797CD200198C26 /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		E70CB5B81E7983BD00198C26 /* EditBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookViewController.swift; sourceTree = "<group>"; };
 		E70CB5BD1E79909C00198C26 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 				E70CB5951E78BC7F00198C26 /* AppDelegate.swift */,
 				E70CB5B01E78BE3100198C26 /* BooksAPIClient.swift */,
 				E70CB5B21E78BEAD00198C26 /* Book.swift */,
-				E70CB5B41E78C33300198C26 /* File.swift */,
+				E70CB5B41E78C33300198C26 /* BookDataStore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 				E70CB5B11E78BE3100198C26 /* BooksAPIClient.swift in Sources */,
 				E70CB5B71E797CD200198C26 /* AddBookViewController.swift in Sources */,
 				E70CB5981E78BC7F00198C26 /* BookDetailViewController.swift in Sources */,
-				E70CB5B51E78C33300198C26 /* File.swift in Sources */,
+				E70CB5B51E78C33300198C26 /* BookDataStore.swift in Sources */,
 				E70CB5B31E78BEAD00198C26 /* Book.swift in Sources */,
 				E70CB59E1E78BC7F00198C26 /* GetTheBooks.xcdatamodeld in Sources */,
 				E70CB5AF1E78BE1900198C26 /* BooksTableViewController.swift in Sources */,

@@ -25,7 +25,7 @@ class AddBookViewController: UIViewController {
         guard let newBook = createBook() else { return }
         BooksAPIClient.addBook(book: newBook) {
             print("finished adding book")
-            self.navigationController?.popViewController(animated: true)
+           _ = self.navigationController?.popViewController(animated: true)
         }
         
     }
@@ -35,7 +35,7 @@ class AddBookViewController: UIViewController {
         guard let title = titleLbl.text,
             let author = authorTxtFld.text,
             let publisher = publisherTxtFld.text,
-            let url = urlTxtFld.text else { return nil }
+            let url = urlTxtFld.text else { return nil } //put in an error function. 
         
         let bookDictionary = ["title" : "\(title)", "author": "\(author)", "publisher": "\(publisher)", "url": "\(url)"]
         let newBook = Book(dictionary: bookDictionary)

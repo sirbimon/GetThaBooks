@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  BookDataStore.swift
 //  GetTheBooks
 //
 //  Created by Bimonaretga on 3/14/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BookDataStore {
+class BookDataStore { //change the file na
     private init() {
     }
     
@@ -20,15 +20,19 @@ class BookDataStore {
 
     func populateBooks( completion: @escaping () -> ()) {
         
-        BooksAPIClient.getListOfBooks { (books) in
+        BooksAPIClient.getListOfBooks { (bookDictArray) in
             self.books.removeAll()
-            for book in books {
+            for book in bookDictArray {
                 let newBook = Book(dictionary: book)
                 self.books.append(newBook)
                 print("added", newBook.title)
             }
             completion()
         }
+    }
+    
+    func editBook() {
+        
     }
     
     
